@@ -8,15 +8,16 @@ class Talker():
     def __init__(self):   
         self.pub = node.create_publisher(Int16, "countup", 10)
         self.n=0
+        node.create_timer(0.5,self.cb)
+
+    def cd():
+        msg=Int16()
+        msd.data =taker.n
+        self.pub.publish(meg)
+        self.n+=1
+
 rclpy.init()
 node = Node("talker")
-talker = Talker()
-
-def cd():
-    msg=Int16()
-    msd.data =taker.n
-    talker.pub.publish(meg)
-    talker.n+=1
-
-node.create_timer(0.5,cb)
+talker = Talker(node)
 rclpy.spin(node)
+
