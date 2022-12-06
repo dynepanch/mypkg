@@ -5,12 +5,12 @@ from rclpy.node import Node
 from std_msgs.msg import Int16
 
 class Talker():
-    def __init__(self):   
+    def __init__(self,node_ref):   
         self.pub = node.create_publisher(Int16, "countup", 10)
         self.n=0
-        node.create_timer(0.5,self.cb)
+        node_ref.create_timer(0.5,self.cb)
 
-    def cd():
+    def cd(self):
         msg=Int16()
         msd.data =taker.n
         self.pub.publish(meg)
